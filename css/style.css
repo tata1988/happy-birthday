@@ -36,6 +36,14 @@ body {
     padding-bottom: 17px;
 }
 
+.women {
+    background-color: #FFF1F8;
+}
+
+.men {
+    background-color: #EFF9FE;
+}
+
 button {
     cursor: pointer;
 }
@@ -47,6 +55,11 @@ img {
 
 p {
     margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .container {
@@ -81,7 +94,14 @@ p {
     font-size: 18px;
     color: #FFFFFF;
     margin-right: 30px;
+}
 
+.men .header__button-change {
+    background: #1178B2;
+}
+
+.women .header__button-change {
+    background: #C300C7;
 }
 
 .header__button-change:last-child {
@@ -105,12 +125,20 @@ p {
     margin-right: 0;
 }
 
-.header__button-gender_man {
+.header__button-gender_men {
     background-image: url('../icons/man.svg');
 }
 
-.header__button-gender_woman {
+.header__button-gender_women {
     background-image: url('../icons/women.svg');
+}
+
+.men .header__button-gender_men {
+    border-color: #1178B2;
+}
+
+.women .header__button-gender_women {
+    border-color: #C300C7;
 }
 
 .card {
@@ -138,12 +166,20 @@ p {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Bad Script';
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8em;
     color: #000000;
     font-size: max(3em, min(calc(100vw * 3 / (840 / 3 / 2)), 6em));
+}
+
+.women .card__text {
+    font-family: 'Bad Script';
+}
+
+.men .card__text {
+    font-family: 'Open Sans';
+    font-weight: 700;
 }
 
 .footer {
@@ -164,6 +200,11 @@ p {
     margin-bottom: 8px;
 }
 
+.person a:hover {
+    opacity: 0.5;
+}
+
+
 .person:last-child {
     margin-bottom: 0;
 }
@@ -173,21 +214,26 @@ p {
     width: 192px;
 }
 
-.social__icon {
-    width: 36px;
-    height: 36px;
-}
-
-.social__icon:hover {
-    opacity: 0.7;
-}
-
 .social-link {
     margin-right: 16px;
+    transition: opacity 0.3s ease-in;
+}
+
+
+.women .social-link {
+    color: #C300C7;
+}
+
+.men .social-link {
+    color: #1178B2;
 }
 
 .social-link:last-child {
     margin-right: 0;
+}
+
+.social-link:hover {
+    opacity: 0.5;
 }
 
 @media (max-width: 880px) {
