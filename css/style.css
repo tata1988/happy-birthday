@@ -41,8 +41,12 @@ button {
 }
 
 img {
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+p {
+    margin: 0;
 }
 
 .container {
@@ -63,6 +67,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 
 }
 
@@ -136,7 +141,7 @@ img {
     font-family: 'Bad Script';
     font-weight: 400;
     font-size: 18px;
-    line-height: 35px;
+    line-height: 1.8em;
     color: #000000;
     font-size: max(3em, min(calc(100vw * 3 / (840 / 3 / 2)), 6em));
 }
@@ -144,6 +149,7 @@ img {
 .footer {
     padding-bottom: 17px;
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -207,5 +213,23 @@ img {
         width: 40px;
         height: 40px;
         background-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .contacts {
+        order: 1;
+    }
+
+    .social {
+        margin-bottom: 30px;
+    }
+
+    .person {
+        font-size: 14px;
     }
 }
