@@ -4,6 +4,8 @@ const buttonsChangeText = document.querySelector('.header__button-change_text');
 const buttonsChangeImage = document.querySelector('.header__button-change_image');
 const cardImg = document.querySelector('.card__img');
 const cardText = document.querySelector('.card__text');
+const cardWrapper = document.querySelector('.card__wrapper');
+const download = document.querySelector('.download');
 const body = document.body;
 
 const state = {
@@ -78,3 +80,17 @@ buttonWomen.addEventListener('click', changeToWomen);
 buttonsChangeText.addEventListener('click', changeText)
 buttonsChangeImage.addEventListener('click', changeImage)
 getDataToCard();
+
+download.addEventListener('click', () => {
+
+    const newWindow = window.open(
+        '',
+        '',
+        `width=840,heigth=520,top=${(screen.height / 2) - 520 / 2},
+        left=${(screen.width / 2) - 840 / 2}`)
+    html2canvas(cardWrapper).then(canvas => {
+        canvas.style.maxWidth = '100%';
+        canvas.style.heigth = 'auto';
+        newWindow.document.body.append(canvas)
+    })
+});
